@@ -18,5 +18,31 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="card.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cashierStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gameEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="card.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cashierStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
