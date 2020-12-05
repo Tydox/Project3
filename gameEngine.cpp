@@ -59,13 +59,13 @@ bool gameEngine::turn() {
 		const Card* max = &min;
 		const Card* tmp;
 
-		/*LOOP: extruct cards from every user deck (extruct one in case first draw or 3 cards otherwise)- check if extructed card is max */
+		/*LOOP: extract cards from every user deck (extract one in case first draw or 3 cards otherwise)- check if extracted card is max */
 		for (int no = 0; no < noOfParicipants; no++) {
 
 			if (!isFirst)
-				tmp = (*(paticipants[no])) - 3;// Students - To do//OPERATOR2
+				tmp = &((*(paticipants[no])) - 3);// Students - To do//OPERATOR2
 			else
-				tmp = (*(paticipants[no])) - 1;// Students - To do//OPERATOR2
+				tmp = &((*(paticipants[no])) - 1);// Students - To do//OPERATOR2
 
 			if (!tmp) {
 				play = extructPlayer(paticipants[no]);
@@ -149,7 +149,7 @@ bool gameEngine::turn() {
 		for (int playerIdx = 0; playerIdx < players.howManyPlayrs; playerIdx++) {
 
 			*winner + *(players.players[playerIdx]);// Students - To do//  OPERATOR2
-
+			//&player+&player
 		}
 
 	}

@@ -1,6 +1,12 @@
 #ifndef _GAMEENGINE
 #define _GAMEENGINE
 
+#define FINISHED_OPERATOR1
+#define FINISHED_OPERATOR2
+#define FINISHED_OPERATOR3
+#define FINISHED_OPERATOR4
+
+
 #include "card.h"
 #include "player.h"
 

@@ -1,6 +1,8 @@
 #pragma once
 #include "Card.h"
 #include <iostream>
+//#include "player.h"
+
 class CashierStack {
 
 private:
@@ -11,12 +13,16 @@ private:
 		friend CashierStack;
 	}*head;
 	int numInDeck;
+
+	friend class Player;
+	
 public:
 
 	CashierStack();
 	~CashierStack();
 	int getNumInDeck()const;
 	const Card* getTopDeck()const;
+
 	const Card* pop();
 
 	void push(const Card* c);

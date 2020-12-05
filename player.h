@@ -24,6 +24,8 @@ public:
 	~Player();
 
 	const Player& operator +=(const Card& cards); 
+	const Card& operator -(int num);
 
+	void operator +(Player& rv);
 
 };
