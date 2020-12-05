@@ -153,6 +153,12 @@ bool gameEngine::turn() {
 		}
 
 	}
+
+
+
+
+
+
 	void gameEngine::setPlayers() {
 
 #ifndef DEBUG

@@ -23,7 +23,7 @@ public:
 	Player(const char* name = NULL);
 	~Player();
 
-
+	const Player& operator +=(const Card& cards); 
 
 
 };

@@ -20,6 +20,12 @@ Player::~Player()
 	delete[] name;
 }
 
+const Player& Player::operator+=(const Card& cards)
+{
+	hand.push(&cards);
+	return *this;
+}
+
 void Player::setName(const char* n) {
 	int size = strlen(n) + 1;
 	name = new char[size];
