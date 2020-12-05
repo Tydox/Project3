@@ -1,14 +1,21 @@
-
 #include "player.h"
 #include <iostream>
 #include <cstring>
-
+//#define DEBUG
+int Player::indexn = 1;
 
 Player::Player(const char* n) {
-
+#ifndef DEBUG
 	if (n)
 		setName(n);
-
+	
+#else
+	
+	char name[20];
+	_itoa_s(indexn,name,20,10);
+	setName(name);
+	++indexn;
+	#endif
 
 }
 
@@ -26,7 +33,7 @@ const Player& Player::operator+=(const Card& cards)
 	return *this;
 }
 
-const Card& Player::operator-(int num)
+const Card* Player::operator-(int num)
 {
 
 	if(hand.getNumInDeck() < num)
@@ -37,36 +44,28 @@ const Card& Player::operator-(int num)
 			{
 				hand.push(trash.pop());
 			}
-
 			trash.reset();
 			hand.shuffle();
 		}
 		else
 		{
-			std::cout << "\nNot enough Cards in Hand to play\n\n";
+			std::cout <<"Player " << this->getName() <<" Not enough Cards in Hand to play\n";
 			const Card* tmp = nullptr;
-			return *tmp;
-		}
-
-		
+			return tmp;
+		}	
 	}
-
 
 	for (int i=0; i<num;++i)
-	{
 			trash.push(hand.pop());	
-	}
 	
-	return *(trash.getTopDeck());
-
-	
+	return (trash.getTopDeck());
 }
 
 void Player::operator+(Player& rv)
 {
 	if(*this->getName()==*rv.getName())//check if both names are on the same memory block thus the same player
 	{
-		std::cout << "\n\nERROR OPERATOR + : SAME PLAYER,SKIPPING\n\n";
+		//std::cout << "\n\nERROR OPERATOR + : SAME PLAYER,SKIPPING\n\n";
 		return;
 	}
 	

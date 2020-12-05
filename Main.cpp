@@ -2,6 +2,10 @@
 #include <iostream>
 #include <ctime>
 
+//#define FINISHED_OPERATOR1
+//#define FINISHED_OPERATOR2
+//#define FINISHED_OPERATOR3
+//#define FINISHED_OPERATOR4
 
 
 using namespace std;

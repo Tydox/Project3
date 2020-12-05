@@ -59,23 +59,6 @@ int Card::getValue() const
 	return value;
 }
 
-//bool Card::operator>(const Card& lv,const Card& rv)
-//{
-//	return (this->getValue()>rv.getValue());
-//}
-
-//const Card& Card::operator=(const Card* rv)
-//{
-//	
-//	this=rv;
-//}
-//
-
-//Card::operator Card* () const
-//{
-//	const Card tmp=*this;
-//	return tmp;
-//}
 
 #ifdef DEBUG
 

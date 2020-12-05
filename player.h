@@ -2,16 +2,18 @@
 #include "CashierStack.h"
 #include "Card.h"
 #include <iostream>
+
 using namespace std;
 class Player {
 
 private:
 	char* name;
 	CashierStack hand, trash;
-
+	static int indexn;
+	
 public:
 	void setName(const char* name);
-
+	
 
 	const Card* getTopDeck();
 	const Card* getTopTrash();
@@ -24,8 +26,7 @@ public:
 	~Player();
 
 	const Player& operator +=(const Card& cards); 
-	const Card& operator -(int num);
-
+	const Card* operator -(int num);
 	void operator +(Player& rv);
 
 };

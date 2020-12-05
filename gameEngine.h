@@ -1,15 +1,10 @@
 #ifndef _GAMEENGINE
 #define _GAMEENGINE
 
-#define FINISHED_OPERATOR1
-#define FINISHED_OPERATOR2
-#define FINISHED_OPERATOR3
-#define FINISHED_OPERATOR4
 
 
 #include "card.h"
 #include "player.h"
-
 
 #define NO_OF_DECK 1
 #define NUM_IN_SERIAL 13
@@ -42,10 +37,6 @@ public:
 	bool turn();
 	void startGame();
 	void moveCardsTrashCardsToWinner(Player* winner);
-
-
-	
-	
 };
 
 

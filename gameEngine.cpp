@@ -63,9 +63,9 @@ bool gameEngine::turn() {
 		for (int no = 0; no < noOfParicipants; no++) {
 
 			if (!isFirst)
-				tmp = &((*(paticipants[no])) - 3);// Students - To do//OPERATOR2
+				tmp = ((*(paticipants[no])) - 3);// Students - To do//OPERATOR2
 			else
-				tmp = &((*(paticipants[no])) - 1);// Students - To do//OPERATOR2
+				tmp = ((*(paticipants[no])) - 1);// Students - To do//OPERATOR2
 
 			if (!tmp) {
 				play = extructPlayer(paticipants[no]);
@@ -149,7 +149,7 @@ bool gameEngine::turn() {
 		for (int playerIdx = 0; playerIdx < players.howManyPlayrs; playerIdx++) {
 
 			*winner + *(players.players[playerIdx]);// Students - To do//  OPERATOR2
-			//&player+&player
+			
 		}
 
 	}
@@ -159,7 +159,7 @@ bool gameEngine::turn() {
 
 
 
-	void gameEngine::setPlayers() {
+void gameEngine::setPlayers() {
 
 #ifndef DEBUG
 		char tmpName[20] = { 0 };
